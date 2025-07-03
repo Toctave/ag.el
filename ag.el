@@ -225,8 +225,8 @@ If REGEXP is non-nil, treat STRING as a regular expression."
     (unless (equal (car (last arguments)) "--")
       (setq arguments (append arguments '("--"))))
     (setq arguments
-          (append '("--line-number" "--column" "--color" "--color-match" "30;43"
-                    "--color-path" "1;32")
+          (append '("--line-number" "--column" "--color" "--color-match" "\"30;43\""
+                    "--color-path" "\"1;32\"")
                   arguments))
     (if ag-group-matches
         (setq arguments (cons "--group" arguments))
